@@ -1,0 +1,70 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="w3-display-middle w3-padding-XXlarge w3-opacity">
+    <h1 class="w3-jumbo w3-text-bold-black">PREMIUM FRUITCAKES PATISSERIE</h1>
+</div>
+
+<img class="mySlides w3-animate-fading" img src="{% static 'images/header1.jpg' %}" style="width:100%" />
+<img class="mySlides w3-animate-fading" img src="{% static 'images/header2.jpg' %}" style="width:100%" />
+<img class="mySlides w3-animate-fading" img src="{% static 'images/header3.jpg' %}" style="width:100%" />
+
+
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+        myIndex++;
+
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 9000);
+    }
+
+</script>
+
+<br>
+<h2>About Us</h2>
+</br>
+
+<p>The premium fruit cake patisserie was created in 2012 by Henry C.
+    An Indonesian Pastry Chef.
+</p>
+
+<p2>Commencing his passion in baking and cooking, during the time he was living in Brussels, Belgium.
+
+    He came from completely different major background in Finance study environment and moved to Paris, France where
+    he
+    attained his official certified pastry chef in Le Cordon Bleu, Paris.
+</p2>
+
+<br>
+<p3>Having lived 7 years in Paris, where he pursued his dreams working in big chains of hotellerie, later he moved
+    to
+    Vienna, Austria to further his passion in Eastern European cake culture. Nowadays, he has his own particular
+    market
+    in Jakarta, where he serves his imagination and brings into reality for
+    those who appreciates European quality fruit cake culture.
+</p3>
+</br>
+
+<br>
+<p4>The premium line of fruit cake he offers is enhanced from different imported ingredients to maintain high level of
+    cake quality.
+</p4>
+</br>
+
+<br></br>
+
+{% endblock content %}
